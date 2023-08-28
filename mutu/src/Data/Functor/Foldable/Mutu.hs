@@ -1,11 +1,11 @@
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE GADTs #-}
-{-# LANGUAGE KindSignatures #-}
 {-# LANGUAGE RankNTypes #-}
 {-# LANGUAGE TypeOperators #-}
 
-module Data.FVect where
+module Data.Functor.Foldable.Mutu (mutu) where
 
+import Data.Functor.Foldable (Base, Recursive, cata)
 import Data.HVect (HVect (..))
 import Data.Kind (Type)
 
@@ -17,6 +17,5 @@ mapAlg :: (forall a. f a -> a) -> FVect f ts -> HVect ts
 mapAlg _ FNil = HNil
 mapAlg alg (x :$: xs) = alg x :&: mapAlg alg xs
 
-mapNT :: (forall t. f t -> g t) -> FVect f ts -> FVect g ts
-mapNT _ FNil = FNil
-mapNT nt (x :$: xs) = nt x :$: mapNT nt xs
+mutu :: (Recursive t) => FVect ((->) (Base t (HVect ts))) ts -> t -> HVect ts
+mutu algs = cata $ \x -> mapAlg ($ x) algs
