@@ -1,0 +1,4 @@
+[submodule "config"]
+	path = config
+	url = https://github.com/danieljtrowbridge/hs-config.git
+	branch = main
