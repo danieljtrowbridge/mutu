@@ -3,6 +3,11 @@
 name: mutu
 version: 0.0.0
 
+author: Daniel Trowbridge
+copyright: 2023 Daniel Trowbridge
+github: danieljtrowbridge/mutu/mutu
+license: MIT
+
 dependencies:
   - base
   - hvect
