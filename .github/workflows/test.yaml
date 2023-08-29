@@ -14,5 +14,13 @@ jobs:
   test:
     uses: danieljtrowbridge/hs-config/.github/workflows/test.yaml@main
     with:
+      cabal-artifact-name: cabal
       ghc-version: 9.4.6
+      package: mutu
+  lint:
+    needs: test
+    uses: danieljtrowbridge/hs-config/.github/workflows/lint.yaml@main
+    with:
+      cabal-artifact-name: cabal
+      docker-tag: 9.4.6
       package: mutu
