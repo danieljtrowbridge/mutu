@@ -1,0 +1,33 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           mutu
+version:        0.0.0
+homepage:       https://github.com/danieljtrowbridge/mutu#readme
+bug-reports:    https://github.com/danieljtrowbridge/mutu/issues
+author:         Daniel Trowbridge
+maintainer:     Daniel Trowbridge
+copyright:      2023 Daniel Trowbridge
+license:        MIT
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/danieljtrowbridge/mutu
+  subdir: mutu
+
+library
+  exposed-modules:
+      Data.Functor.Foldable.Mutu
+  other-modules:
+      Paths_mutu
+  hs-source-dirs:
+      src
+  build-depends:
+      base
+    , hvect
+    , recursion-schemes
+  default-language: Haskell2010
