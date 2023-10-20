@@ -11,13 +11,11 @@ on:
       - main
 
 jobs:
-  lint:
-    uses: danieljtrowbridge/hs-config/.github/workflows/lint.yaml@main
-    with:
-      docker-tag: 9.4.6
-      package: mutu
-  test:
-    uses: danieljtrowbridge/hs-config/.github/workflows/test.yaml@main
+  ci:
+    permissions:
+      id-token: write
+      pages: write
+    uses: danieljtrowbridge/hs-config/.github/workflows/ci.yaml@main
     with:
       ghc-version: 9.4.6
       package: mutu
