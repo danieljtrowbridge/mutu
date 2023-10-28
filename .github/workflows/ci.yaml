@@ -12,6 +12,7 @@ on:
 
 jobs:
   ci:
+    name: CI
     permissions:
       id-token: write
       pages: write
