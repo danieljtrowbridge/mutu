@@ -9,8 +9,8 @@ github: danieljtrowbridge/mutu/mutu
 license: MIT
 
 dependencies:
+  - HList
   - base
-  - hvect
   - recursion-schemes
 
 library:
