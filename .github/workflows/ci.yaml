@@ -20,3 +20,6 @@ jobs:
     with:
       ghc-version: 9.4.6
       package: mutu
+  yamllint:
+    name: Run yamllint
+    uses: danieljtrowbridge/hs-config/.github/workflows/yamllint.yaml@main
