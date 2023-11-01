@@ -1,9 +1,12 @@
 ---
 
+extra-deps:
+  - HList-0.5.3.0
+
 packages:
   - ./mutu
 
 resolver:
   url:
     "https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots\
-    /master/lts/21/9.yaml"
+    /master/lts/21/17.yaml"
